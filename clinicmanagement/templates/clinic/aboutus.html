@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SMILE</title>
+  <style media="screen">
+    /* Ensure the body and html take up the full height */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Apply gradient background and ensure it covers the entire viewport */
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffffff); /* Gradient background */
+      background-size: cover;
+      background-position: center center;
+    }
+
+    /* Adjust jumbotron styling */
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+      padding: 10px; /* Added padding to make alert text more visible */
+      border-radius: 5px; /* Rounded corners */
+      font-weight: normal; /* Make the font weight normal for a lighter feel */
+    }
+
+    .jumbotron .lead {
+      font-size: 1.2rem; /* Optional: make lead text a bit bigger for better readability */
+    }
+
+    /* Optional: Remove box-like styling from buttons and input fields */
+    .btn {
+      border-radius: 25px; /* Make buttons rounded */
+      padding: 12px 30px; /* Give buttons more padding */
+    }
+
+    /* Optional: Remove boxy appearance from form fields */
+    input, textarea, select {
+      border: none;
+      outline: none;
+      padding: 12px;
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 5px; /* Rounded corners for inputs */
+      background-color: #f4f6f7; /* Light gray background for input fields */
+    }
+
+    /* Ensure the container doesn't overflow and stays centered */
+    .container {
+      height: 100%; /* Full screen height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .jumbotron {
+      text-align: center;
+      width: 100%;
+      padding: 30px;
+    }
+
+    /* Footer styling adjustments */
+    footer {
+      background-color: #f8f9fa; /* Light background color for the footer */
+      padding: 10px 0; /* Reduce the padding to make it smaller */
+      text-align: center;
+      font-size: 0.9rem; /* Reduce font size */
+      margin-top: auto; /* Push footer to the bottom */
+    }
+
+    footer p {
+      margin: 0;
+      color: #6c757d; /* Darker gray text color */
+    }
+
+    /* Add padding underneath the About Us heading */
+    h3 {
+      margin-bottom: 20px; /* This adds space below the heading */
+    }
+  </style>
+  <title> </title>
+</head>
+
+<body>
+  {% include "clinic/navbar.html" %}
+  
+  <!-- Main Content -->
+  <div class="container">
+    <center>
+      <!-- Removed the alert class here, so it's no longer in a box -->
+      <h3 style="margin-bottom:20px;">About Us!</h3> <!-- Added margin-bottom for space -->
+    </center>
+
+    <div class="jumbotron">
+      <h2 class="display-4" style="font-weight: normal; font-size: 36px; margin-bottom: 20px;">
+        Say hello to easier dental care management!
+      </h2>
+      <p class="lead">
+        SMILE is an easy-to-use system that helps dental clinics stay organized and run smoothly.
+      </p>
+
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <p>
+          Whether it’s booking appointments, keeping track of patient records, or handling payments,
+          <strong>SMILE</strong> makes everything simple and stress-free. We designed <strong>SMILE</strong>
+          to save time for both dental teams and patients. It keeps things running on schedule and helps
+          everyone stay on the same page. Whether you're part of a small clinic or a big one,
+          <strong>SMILE</strong> is here to help you give the best care with less hassle.
+          With <strong>SMILE</strong>, managing a dental clinic is something to smile about!
+        </p>
+      </div>
+
+      <hr class="my-4">
+      <p>Explore our Website.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+      </p>
+    </div>
+  </div>
+
+  {% include "clinic/footer.html" %}
+
+  <!-- Footer with adjusted size -->
+  <footer>
+    <p>&copy; 2025 SMILE Dental Clinic. All rights reserved.</p>
+  </footer>
+</body>
+
+
+</html>
+

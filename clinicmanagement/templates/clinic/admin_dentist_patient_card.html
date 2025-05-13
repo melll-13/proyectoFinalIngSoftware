@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+    .custom-btn {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 10px;
+      color: white;
+      background-color: #426196; /* Custom color */
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .custom-btn:hover {
+      background-color: #426196;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .card a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static 'images/admin.png' %}" alt="Admin" style="width:100%">
+        <p class="title">Admin</p>
+        <p><a href="/adminclick" class="custom-btn">View</a></p>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static 'images/dentist.png' %}" alt="Dentist" style="width:100%">
+        <p class="title">Dentist</p>
+        <p><a href="/dentistclick" class="custom-btn">View</a></p>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static 'images/patient.jpg' %}" alt="Patient" style="width:100%">
+        <p class="title">Patient</p>
+        <p><a href="/patientclick" class="custom-btn">View</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+

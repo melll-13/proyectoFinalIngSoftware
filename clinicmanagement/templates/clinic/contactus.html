@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Feedback | SMILE</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      padding-top: 150px; /* increased top spacing */
+      padding-bottom: 150px;
+    }
+
+    .feedback-card {
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .feedback-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .feedback-title {
+      font-weight: 600;
+      font-size: 28px;
+      color: #007bff;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .btn-primary {
+      border-radius: 50px;
+    }
+
+    .form-control {
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #f1f1f1;
+      padding: 10px 0; /* thinner footer */
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  {% include "clinic/navbar.html" %}
+
+  <div class="main-content">
+    <div class="feedback-card">
+      <div class="feedback-title">We’d Love to Hear From You!</div>
+
+      <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  {% include "clinic/footer.html" %}
+
+  <!-- Optional JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

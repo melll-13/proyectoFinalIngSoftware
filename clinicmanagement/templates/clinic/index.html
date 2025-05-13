@@ -1,0 +1,76 @@
+{% extends 'clinic/homebase.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+  <style>
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-image: url('{% static "images/bg.jpg" %}');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 60px; /* Space from bottom edge */
+}
+
+    .alert {
+      margin: 0px;
+    }
+
+    .glow {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+
+    .custom-appointment-btn {
+      background-color: #88a4d6; /* Custom purple */
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-appointment-btn:hover {
+      background-color: #426196; /* Darker on hover */
+      color: #fff;
+    }
+  </style>
+</head>
+
+<br><br>
+
+<div class="jumbotron" style="margin-bottom: 0px; margin-top: 0px;">
+  <br>
+  <p class="lead">
+    <a class="custom-appointment-btn" href="/patientclick" role="button">Make Appointment</a>
+  </p>
+  <br><br>
+</div>
+
+<br><br><br><br>
+
+{% include "clinic/admin_dentist_patient_card.html" %}
+<br><br><br>
+
+{% endblock content %}
+

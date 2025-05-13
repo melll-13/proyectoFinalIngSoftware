@@ -1,0 +1,22 @@
+{% extends 'clinic/homebase.html' %}
+
+{% block content %}
+
+<br>
+<br>
+
+<!-- Jumbotron Section -->
+<div class="jumbotron" style="margin-bottom:0px;">
+  <h1 class="display-4" style="text-align:center;">Hello, Admin</h1>
+  <p class="lead">Welcome to Smile</p>
+  <hr class="my-4">
+  <p>Log in to manage appointments, patient records, and keep the clinic running smoothly. We’re here to help you make smiles happen!</p>
+  <p class="lead">
+    <!-- Default Bootstrap buttons -->
+    <a class="btn btn-primary btn-lg" href="/adminsignup" role="button">SignUp</a>
+    <a class="btn btn-primary btn-lg" href="/adminlogin" role="button">Login</a>
+  </p>
+</div>
+
+{% endblock content %}
+
