@@ -47,6 +47,31 @@ A web-based application designed to streamline operations within dental clinics 
 - **Doctor**: Log in after admin approval. View assigned patients and appointments
 - **Patient**: Register and wait for approval. Request appointments and view/download invoices
 
+## structure 
+
+proyectoFinalIngSoftware/
+├── clinicmanagement/
+│   ├── migrations/
+│   ├── templates/
+│   │   ├── admin/
+│   │   ├── doctor/
+│   │   └── patient/
+│   ├── static/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+├── proyectoFinalIngSoftware/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── db.sqlite3
+├── manage.py
+├── requirements.txt
+
+
 
 
 
