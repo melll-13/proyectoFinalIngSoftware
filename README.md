@@ -43,9 +43,9 @@ A web-based application designed to streamline operations within dental clinics 
    Open your browser and go to: http://127.0.0.1:8000/
 
 ## Usage 
-**Admin**: Log in with  credentials. Manage doctors, patients, appointments, and invoices
-Doctor: Log in after admin approval. View assigned patients and appointments
-Patient: Register and wait for approval. Request appointments and view/download invoices
+- **Admin**: Log in with  credentials. Manage doctors, patients, appointments, and invoices
+- **Doctor**: Log in after admin approval. View assigned patients and appointments
+- **Patient**: Register and wait for approval. Request appointments and view/download invoices
 
 
 
